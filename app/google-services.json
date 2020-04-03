@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "411978313384",
+    "firebase_url": "https://covidtrack-4107c.firebaseio.com",
+    "project_id": "covidtrack-4107c",
+    "storage_bucket": "covidtrack-4107c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:411978313384:android:8ffb997c1e5fa02a1ddc9d",
+        "android_client_info": {
+          "package_name": "com.aniket.covidtrack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "411978313384-s08s9mjk27jlt33mr5fg1p5afg72ilev.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aniket.covidtrack",
+            "certificate_hash": "ab1ef2b7cf67f3af5729ba3d44f5179ff63ae80c"
+          }
+        },
+        {
+          "client_id": "411978313384-08noclprqtds1gg6tskmgnp3e6itnf1d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUwhVy3skRnpgdpuX6MRfmrtHelkRhAeM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "411978313384-08noclprqtds1gg6tskmgnp3e6itnf1d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

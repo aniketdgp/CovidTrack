@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">CovidTrack</string>
+    <string name="appversion">1</string>
+
+
+
+
+
+
+    <string name="disclaimer">Information Provided By the App is Via 3rd party API,Accuracy of data completely Relies on it.</string>
+    <string name="appdownloadlink">https://google.com/</string>
+
+
+
+
+</resources>

@@ -1,0 +1,822 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/rv_appbar"
+            android:background="@drawable/appbar_background"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_gps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                app:shimmer_clip_to_children="true"
+                app:shimmer_auto_start="true"
+                app:shimmer_duration="1500"
+                app:shimmer_shape="radial"
+                app:shimmer_repeat_count="5"
+                android:layout_marginStart="10dp"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/btn_location"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/location"/>
+
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <TextView
+                android:id="@+id/tv_countryname"
+                android:text="India"
+                android:layout_marginStart="10dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/shimmer_gps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageButton
+                android:id="@+id/btn_about"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/about"/>
+
+
+            <RelativeLayout
+                android:id="@+id/rv_updatebutton"
+                android:layout_width="wrap_content"
+                android:layout_toLeftOf="@+id/btn_about"
+                android:layout_height="wrap_content">
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    app:shimmer_clip_to_children="true"
+                    app:shimmer_auto_start="true"
+                    app:shimmer_duration="1500"
+                    android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/updatebutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Update App"
+                    android:textSize="10dp"
+                    android:textStyle="bold"
+                    android:background="@drawable/updatebutton_background"
+                    android:textColor="@color/white"
+                    android:layout_marginRight="10dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"/>
+
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+            </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/rv_body"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rv_appbar">
+
+
+
+            <ScrollView
+                android:id="@+id/scv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="60dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+
+                    <LinearLayout
+                        android:id="@+id/rv_div1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/flagbackground"
+                        android:layout_width="match_parent"
+                        android:layout_height="210dp"
+                        android:orientation="horizontal">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+
+                            <RelativeLayout
+                                android:layout_centerVertical="true"
+                                android:id="@+id/rv_flag"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+
+
+                                <ImageView
+                                    android:id="@+id/iv_flag"
+                                    android:layout_width="150dp"
+                                    android:layout_height="140dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_weight="1"
+                                    android:src="@mipmap/in"/>
+
+
+                            </RelativeLayout>
+
+
+
+
+
+
+
+
+                            <RelativeLayout
+                                android:id="@+id/growth"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_toEndOf="@+id/rv_flag"
+                                android:layout_weight="10"
+                                android:layout_marginLeft="10dp">
+
+
+                                <RelativeLayout
+                                    android:id="@+id/rv_growth_inner"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+
+                                    <TextView
+                                        android:id="@+id/tv_sharedata"
+                                        android:text="Share This Data"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:textSize="12dp"
+                                        android:textAllCaps="true"
+                                        android:background="@drawable/flaglabelsbackground"
+                                        android:padding="2dp"
+                                        android:textColor="@color/white"
+                                        android:textStyle="bold"/>
+
+
+                                    <RelativeLayout
+                                        android:id="@+id/rv_ncgarrowgrowth"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_width="match_parent"
+                                        android:gravity="center"
+                                        android:layout_below="@id/tv_sharedata"
+                                        android:layout_height="wrap_content">
+
+                                        <com.facebook.shimmer.ShimmerFrameLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            app:shimmer_clip_to_children="true"
+                                            app:shimmer_auto_start="true"
+                                            app:shimmer_duration="1500"
+                                            android:orientation="vertical">
+
+                                        <ImageButton
+                                            android:id="@+id/btn_share"
+                                            android:layout_width="50dp"
+                                            android:layout_height="50dp"
+                                            android:layout_centerVertical="true"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_marginRight="10dp"
+                                            android:background="@drawable/share"/>
+
+                                        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+                                    </RelativeLayout>
+
+
+                                    <TextView
+                                        android:id="@+id/tv_viewglobaldata"
+                                        android:text="Global Cases"
+                                        android:layout_below="@id/rv_ncgarrowgrowth"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:textSize="12dp"
+                                        android:textAllCaps="true"
+                                        android:background="@drawable/flaglabelsbackground"
+                                        android:padding="2dp"
+                                        android:textColor="@color/white"
+                                        android:layout_marginTop="10dp"
+                                        android:textStyle="bold"/>
+
+
+                                    <RelativeLayout
+                                        android:id="@+id/rv_ndgarrowgrowth"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_width="match_parent"
+                                        android:gravity="center"
+                                        android:layout_below="@id/tv_viewglobaldata"
+                                        android:layout_height="wrap_content">
+
+
+                                        <com.facebook.shimmer.ShimmerFrameLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                                            app:shimmer_clip_to_children="true"
+                                            app:shimmer_auto_start="true"
+                                            app:shimmer_duration="1500"
+                                            android:orientation="vertical">
+
+
+                                        <ImageButton
+                                            android:id="@+id/btn_globaldata"
+                                            android:layout_width="50dp"
+                                            android:layout_height="50dp"
+                                            android:layout_centerVertical="true"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_marginRight="10dp"
+                                            android:background="@drawable/global"/>
+
+
+                                        </com.facebook.shimmer.ShimmerFrameLayout>
+
+                                    </RelativeLayout>
+
+
+                                </RelativeLayout>
+
+
+
+                            </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+                        </RelativeLayout>
+
+
+
+
+
+                    </LinearLayout>
+
+<!--                    </com.facebook.shimmer.ShimmerFrameLayout>-->
+
+
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/rv_div2"
+                        android:layout_below="@+id/rv_div1"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/databackround">
+
+                        <com.facebook.shimmer.ShimmerFrameLayout
+                            android:id="@+id/ma_shimmer1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            app:shimmer_clip_to_children="true"
+                            app:shimmer_auto_start="true"
+                            app:shimmer_colored="true"
+                            app:shimmer_highlight_color="@color/colorPrimary"
+                            app:shimmer_duration="1500"
+                            android:orientation="vertical">
+
+
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+
+
+                            <RelativeLayout
+                                android:id="@+id/rv_cases"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+
+
+                                <TextView
+                                    android:id="@+id/tv_totalcaseslabel"
+                                    android:text="Total Cases"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:textSize="12dp"
+                                    android:textAllCaps="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:background="@drawable/datalabels"
+                                    android:padding="2dp"
+                                    android:textColor="@color/white"
+                                    android:layout_marginTop="10dp"
+                                    android:textStyle="bold"/>
+
+
+                                <TextView
+                                    android:id="@+id/tv_totalcases"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_totalcaseslabel"
+                                    android:textAllCaps="true"
+                                    android:text="1964"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="10dp"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorPrimaryDark"/>
+
+
+
+                                <TextView
+                                    android:id="@+id/tv_newcaseslabel"
+                                    android:text="New Cases"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:textSize="12dp"
+                                    android:textAllCaps="true"
+                                    android:background="@drawable/datalabels"
+                                    android:padding="2dp"
+                                    android:textColor="@color/white"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_below="@+id/tv_totalcases"
+                                    android:textStyle="bold"/>
+
+
+
+                                <TextView
+                                    android:id="@+id/tv_newcases"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_newcaseslabel"
+                                    android:textAllCaps="true"
+                                    android:text="243"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="10dp"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorPrimaryDark"/>
+
+
+                            </RelativeLayout>
+
+
+
+                            <RelativeLayout
+                                android:id="@+id/rv_death"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+
+
+                                <TextView
+                                    android:id="@+id/tv_totaldeathlabel"
+                                    android:text="Total Deaths"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:textSize="12dp"
+                                    android:textAllCaps="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:background="@drawable/datalabels"
+                                    android:padding="2dp"
+                                    android:textColor="@color/white"
+                                    android:layout_marginTop="10dp"
+                                    android:textStyle="bold"/>
+
+
+                                <TextView
+                                    android:id="@+id/tv_totaldeath"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_totaldeathlabel"
+                                    android:textAllCaps="true"
+                                    android:text="43"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="10dp"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorPrimaryDark"/>
+
+
+
+                                <TextView
+                                    android:id="@+id/tv_newdeathlabel"
+                                    android:text="New Deaths"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:textSize="12dp"
+                                    android:textAllCaps="true"
+                                    android:background="@drawable/datalabels"
+                                    android:padding="2dp"
+                                    android:textColor="@color/white"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_below="@+id/tv_totaldeath"
+                                    android:textStyle="bold"/>
+
+
+
+                                <TextView
+                                    android:id="@+id/tv_newdeath"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_newdeathlabel"
+                                    android:textAllCaps="true"
+                                    android:text="+2"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="10dp"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorPrimaryDark"/>
+
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                    </com.facebook.shimmer.ShimmerFrameLayout>
+
+                    </RelativeLayout>
+
+
+
+
+
+            <!--  Division 3 Here      -->
+
+                    <RelativeLayout
+                        android:id="@+id/rv_div3"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/databackround"
+                        android:layout_below="@+id/rv_div2">
+
+
+                        <com.facebook.shimmer.ShimmerFrameLayout
+                            android:id="@+id/ma_shimmer2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            app:shimmer_clip_to_children="true"
+                            app:shimmer_auto_start="true"
+                            app:shimmer_colored="true"
+                            app:shimmer_highlight_color="@color/colorPrimary"
+                            app:shimmer_duration="1500"
+                            android:orientation="vertical">
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+
+
+                            <RelativeLayout
+                                android:id="@+id/rv_active"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+
+
+                                <TextView
+                                    android:id="@+id/tv_activecaseslabel"
+                                    android:text="Active Cases"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:textSize="12dp"
+                                    android:textAllCaps="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:background="@drawable/datalabels"
+                                    android:padding="2dp"
+                                    android:textColor="@color/white"
+                                    android:layout_marginTop="10dp"
+                                    android:textStyle="bold"/>
+
+
+                                <TextView
+                                    android:id="@+id/tv_activecases"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_activecaseslabel"
+                                    android:textAllCaps="true"
+                                    android:text="1700"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="10dp"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorPrimaryDark"/>
+
+
+
+                                <TextView
+                                    android:id="@+id/tv_casespermillionlabel"
+                                    android:text="Cases Per Million"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:textSize="12dp"
+                                    android:textAllCaps="true"
+                                    android:background="@drawable/datalabels"
+                                    android:padding="2dp"
+                                    android:textColor="@color/white"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_below="@+id/tv_activecases"
+                                    android:textStyle="bold"/>
+
+
+
+                                <TextView
+                                    android:id="@+id/tv_casespermillion"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_casespermillionlabel"
+                                    android:textAllCaps="true"
+                                    android:text="0.9"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="10dp"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorPrimaryDark"/>
+
+
+                            </RelativeLayout>
+
+
+
+                            <RelativeLayout
+                                android:id="@+id/rv_critical"
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+
+
+                                <TextView
+                                    android:id="@+id/tv_criticalcaseslabel"
+                                    android:text="Critical Cases"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:textSize="12dp"
+                                    android:textAllCaps="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:background="@drawable/datalabels"
+                                    android:padding="2dp"
+                                    android:textColor="@color/white"
+                                    android:layout_marginTop="10dp"
+                                    android:textStyle="bold"/>
+
+
+                                <TextView
+                                    android:id="@+id/tv_criticalcases"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_criticalcaseslabel"
+                                    android:textAllCaps="true"
+                                    android:text="2"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="10dp"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorPrimaryDark"/>
+
+
+
+                                <TextView
+                                    android:id="@+id/tv_deathpermillionlabel"
+                                    android:text="Deaths Per Million"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:textSize="12dp"
+                                    android:textAllCaps="true"
+                                    android:background="@drawable/datalabels"
+                                    android:padding="2dp"
+                                    android:textColor="@color/white"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_below="@+id/tv_criticalcases"
+                                    android:textStyle="bold"/>
+
+
+
+                                <TextView
+                                    android:id="@+id/tv_deathpermillion"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_deathpermillionlabel"
+                                    android:textAllCaps="true"
+                                    android:text="0.1"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="10dp"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorPrimaryDark"/>
+
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/rv_div4"
+                        android:layout_below="@+id/rv_div3"
+                        android:background="@drawable/databackroundrecovered"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_height="100dp">
+
+                        <com.facebook.shimmer.ShimmerFrameLayout
+                            android:id="@+id/ma_shimmer3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            app:shimmer_clip_to_children="true"
+                            app:shimmer_auto_start="true"
+                            app:shimmer_colored="true"
+                            app:shimmer_highlight_color="@color/greendark"
+                            app:shimmer_duration="1500"
+                            android:orientation="vertical">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <TextView
+                                android:id="@+id/tv_recoveredcaseslabel"
+                                android:text="Recovered"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textSize="12dp"
+                                android:textAllCaps="true"
+                                android:background="@drawable/databackroundrecovered"
+                                android:padding="2dp"
+                                android:textColor="@color/white"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:textStyle="bold"/>
+
+
+
+                            <TextView
+                                android:id="@+id/tv_recoveredcases"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_recoveredcaseslabel"
+                                android:textAllCaps="true"
+                                android:text="100"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="10dp"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/greendark"/>
+
+
+
+
+
+                        </RelativeLayout>
+
+                        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+                    </RelativeLayout>
+
+
+
+
+
+                </RelativeLayout>
+
+
+
+            </ScrollView>
+
+
+            <Button
+                android:id="@+id/btn_statewise"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/viewstatebutton_background"
+                android:textStyle="bold"
+                android:textSize="12dp"
+                android:text="View State Wise Report"
+                android:textColor="@color/white"/>
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

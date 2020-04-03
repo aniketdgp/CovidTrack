@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/statetilebackround">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_statename"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:textSize="12dp"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_vertical"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:background="@drawable/statebackround"
+                    android:textColor="@color/blacklight"
+                    android:text="Andaman And Nicobar Iskands"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_marginLeft="10dp"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <RelativeLayout
+                        android:id="@+id/cc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+
+                        <TextView
+                            android:id="@+id/tv_state_confirmedcaseslabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/blacklight"
+                            android:textAllCaps="true"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/statetextbackground"
+                            android:layout_marginRight="10dp"
+                            android:padding="2dp"
+                            android:layout_centerVertical="true"
+                            android:text="Confirmed Cases :"/>
+
+                        <TextView
+                            android:id="@+id/tv_state_confirmedcases"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="30dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/blacklight"
+                            android:textAllCaps="true"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:text="123"/>
+
+
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/dc"
+                        android:layout_below="@+id/cc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+
+                        <TextView
+                            android:id="@+id/tv_state_dischargedlabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/blacklight"
+                            android:textAllCaps="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/statetextbackground"
+                            android:layout_marginRight="10dp"
+                            android:padding="2dp"
+                            android:text="Discharged :"/>
+
+                        <TextView
+                            android:id="@+id/tv_state_discharged"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="30dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/blacklight"
+                            android:textAllCaps="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:text="12"/>
+
+
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/de"
+                        android:layout_below="@+id/dc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_state_deathslabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/blacklight"
+                            android:layout_marginTop="10dp"
+                            android:textAllCaps="true"
+                            android:background="@drawable/statetextbackground"
+                            android:layout_marginRight="10dp"
+                            android:padding="2dp"
+                            android:layout_centerVertical="true"
+                            android:text="Deaths :"/>
+
+                        <TextView
+                            android:id="@+id/tv_state_deaths"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="30dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/blacklight"
+                            android:textAllCaps="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_alignParentRight="true"
+                            android:text="12"/>
+
+
+
+
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/cfs"
+                        android:layout_below="@+id/de"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_state_confirmedforeignlabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/blacklight"
+                            android:layout_marginTop="10dp"
+                            android:layout_centerVertical="true"
+                            android:textAllCaps="true"
+                            android:background="@drawable/statetextbackground"
+                            android:layout_marginRight="10dp"
+                            android:padding="2dp"
+                            android:text="Confirmed Foreign Cases :"/>
+
+                        <TextView
+                            android:id="@+id/tv_state_confirmedforeign"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="30dp"
+                            android:layout_alignParentRight="true"
+                            android:textStyle="bold"
+                            android:textColor="@color/blacklight"
+                            android:textAllCaps="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_centerVertical="true"
+                            android:text="12"/>
+
+
+
+
+
+                    </RelativeLayout>
+
+
+
+
+                </RelativeLayout>
+
+
+
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+</LinearLayout>
