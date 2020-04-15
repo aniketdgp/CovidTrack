@@ -1,4 +1,4 @@
 # CovidTrack
 An Android App to Track The Count Of Covid Globally And as in India Using a 3rd party api
 
-![Alt text](https://raw.githubusercontent.com/aniketdgp/CovidTrack/master/ss/ss1.jpeg?raw=true "Optional Title")
+/<img src="https://github.com/aniketdgp/CovidTrack/blob/master/ss/ss1.jpeg" style=" width:100px ; height:100px " />
